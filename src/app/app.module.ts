@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
+import { PropertyModule } from './property/property.module';
+
 
 
 @NgModule({
@@ -14,6 +16,7 @@ import { HeaderComponent } from './common/header/header.component';
   ],
   imports: [
     BrowserModule,
+    PropertyModule,
     AppRoutingModule
   ],
   providers: [],
