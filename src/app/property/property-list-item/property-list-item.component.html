@@ -1,9 +1,9 @@
 
-<a [routerLink]="['/properties', property.id]">
+<a [routerLink]="['/properties', property._id]">
 <div class="card bwm-card">
-  <img class="card-img-top" src="http://via.placeholder.com/350x250" alt="">
+  <img class="card-img-top" src="{{ property.image }}" alt="">
   <div class="card-block">
-    <h6 class="card-subtitle">{{ property.category }} &#183;{{ property.city }}</h6>
+    <h6 class="card-subtitle {{property.category}}">{{property.shared ? 'Shared' : 'Whole'}} {{ property.category }} &#183;{{ property.city }}</h6>
     <h4 class="card-title">{{ property.title }}</h4>
     <p class="card-text">{{ property.dailyRate }} &#183; Free Cancelation</p>
   </div>

@@ -9,6 +9,7 @@ import { PropertyModule } from './property/property.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
