@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, UpperCasePipe} from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule} from '@angular/common/http';
+import { NgPipesModule } from 'ngx-pipes';
 
 import { PropertyListComponent } from './property-list/property-list.component';
 import { PropertyListItemComponent } from './property-list-item/property-list-item.component';
 import { PropertyComponent } from './property.component';
-import {PropertyService} from './shared/property.service';
-import { Routes, RouterModule } from '@angular/router';
 import { PropertyDetailComponent } from './property-detail/property-detail.component';
+
+import {PropertyService} from './shared/property.service';
+
+
 
 const routes: Routes = [
   { path: 'properties',
@@ -21,13 +26,15 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-     RouterModule.forChild(routes)
-  ],
+     RouterModule.forChild(routes),
+    HttpClientModule,
+    NgPipesModule],
   declarations: [
     PropertyListComponent,
     PropertyListItemComponent,
     PropertyComponent,
-    PropertyDetailComponent],
+    PropertyDetailComponent
+  ],
   providers: [
     PropertyService
   ]
