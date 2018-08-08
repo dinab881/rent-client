@@ -44,3 +44,4 @@ testem.log
 Thumbs.db
 package-lock.json
 /server/config/dev.js
+/server/.vscode
