@@ -8,8 +8,8 @@ const propertyRoutes = require('./routes/properties');
 const userRoutes = require('./routes/users');
 
 mongoose.connect(config.DB_URI).then(() => {
-  const fakeDb = new FakeDb();
-  fakeDb.seedDb();
+  /*const fakeDb = new FakeDb();
+  fakeDb.seedDb();*/
 });
 const app = express();
 app.use(bodyParser.json());
